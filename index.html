@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agence Matrimoniale Sénégalaise SEUY</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: linear-gradient(180deg, #ffe6eb, #fff5f7);
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    header {
+        text-align: center;
+        padding: 40px 20px;
+        background: linear-gradient(135deg, #ff2e63, #ff5f8f);
+        color: white;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    header img {
+        width: 220px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        text-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: normal;
+        margin-top: 0;
+    }
+
+    .container {
+        max-width: 750px;
+        margin: 20px auto;
+        padding: 25px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 15px;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        font-size: 15px;
+        transition: 0.3s;
+    }
+
+    input:focus, textarea:focus {
+        border-color: #ff2e63;
+        box-shadow: 0 0 8px rgba(255,46,99,0.4);
+    }
+
+    button {
+        width: 100%;
+        background: #ff2e63;
+        color: white;
+        padding: 15px;
+        font-size: 19px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 25px;
+        transition: 0.3s;
+        box-shadow: 0 4px 12px rgba(255,46,99,0.4);
+    }
+
+    button:hover {
+        background: #e6004c;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        color: #555;
+    }
+
+    footer a {
+        color: #ff2e63;
+        text-decoration: none;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="couple_mariage.jpg" alt="Couple Mariage">
+    <h1>Ak Agence Matrimoniale Sénégalaise SEUY célibataire diekhna si mim réew !</h1>
+    <h2>Rencontres sérieuses, respect des valeurs, mariage en 6 mois.</h2>
+</header>
+
+<div class="container">
+    <h2>Inscris-toi dès maintenant pour trouver ton/ta partenaire idéal(e) ❤️</h2>
+
+    <form id="waForm">
+        <label>Nom complet :</label>
+        <input type="text" id="name" required>
+
+        <label>Âge :</label>
+        <input type="number" id="age" required>
+
+        <label>Sexe :</label>
+        <div class="radio-group">
+            <input type="radio" name="sexe" value="Homme"> Homme
+            <input type="radio" name="sexe" value="Femme"> Femme
+        </div>
+
+        <label>Situation actuelle :</label>
+        <div class="radio-group">
+            <input type="radio" name="situation" value="Célibataire"> Célibataire
+            <input type="radio" name="situation" value="Divorcé(e)"> Divorcé(e)
+            <input type="radio" name="situation" value="Veuf(ve)"> Veuf(ve)
+        </div>
+
+        <label>Avec ou sans enfant :</label>
+        <input type="text" id="enfant">
+
+        <label>Profession :</label>
+        <input type="text" id="profession" required>
+
+        <label>Ville / Région :</label>
+        <input type="text" id="ville" required>
+
+        <label>Contact WhatsApp :</label>
+        <input type="text" id="contact" required>
+
+        <label>Quel type de personne recherches-tu ?</label>
+        <textarea id="recherche" rows="4" required></textarea>
+
+        <label>C'est la femme qui choisit toujours les lieux de rencontre</label>
+        <div class="radio-group">
+            <input type="radio" name="choix" value="Oui"> Oui
+            <input type="radio" name="choix" value="Non"> Non
+        </div>
+
+        <label>Es-tu prêt(e) à t’engager sérieusement ?</label>
+        <div class="radio-group">
+            <input type="radio" name="engagement" value="Oui"> Oui
+            <input type="radio" name="engagement" value="Non"> Non
+        </div>
+
+        <p><strong>L'inscription est à 10 000 francs CFA</strong></p>
+
+        <button type="submit">Envoyer ma candidature</button>
+    </form>
+</div>
+
+<footer>
+    <p>WhatsApp : <a href="https://wa.me/221761909946">+221 76 190 99 46</a></p>
+    <p>Instagram / Facebook / TikTok : @Agence matrimoniale sénégalaise Seuy</p>
+</footer>
+
+<script>
+    document.getElementById("waForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const age = document.getElementById("age").value;
+        const enfant = document.getElementById("enfant").value;
+        const profession = document.getElementById("profession").value;
+        const ville = document.getElementById("ville").value;
+        const contact = document.getElementById("contact").value;
+        const recherche = document.getElementById("recherche").value;
+
+        const sexe = document.querySelector('input[name="sexe"]:checked')?.value || "Non renseigné";
+        const situation = document.querySelector('input[name="situation"]:checked')?.value || "Non renseigné";
+        const choix = document.querySelector('input[name="choix"]:checked')?.value || "Non renseigné";
+        const engagement = document.querySelector('input[name="engagement"]:checked')?.value || "Non renseigné";
+
+        const phone = "221761909946";
+
+        const text = `*NOUVELLE CANDIDATURE - AGENCE SEUY*\n\n👤 *Nom :* ${name}\n🎂 *Âge :* ${age}\n⚧ *Sexe :* ${sexe}\n📌 *Situation :* ${situation}\n👶 *Enfants :* ${enfant}\n💼 *Profession :* ${profession}\n🌍 *Ville :* ${ville}\n📱 *WhatsApp :* ${contact}\n❤️ *Type de personne recherchée :*\n${recherche}\n\n📍 *La femme choisit les lieux de rencontre :* ${choix}\n💍 *Prêt(e) à s'engager ?* ${engagement}\n\nFrais d'inscription : 10 000 FCFA.`;
+
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+        window.open(url, "_blank");
+    });
+</script>
+
+</body>
+</html>
