@@ -62,7 +62,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(0.9);
+            filter: brightness(1);
         }
 
         .overlay {
@@ -89,13 +89,9 @@
         }
 
         /* Hero section avec le titre principal */
-        .hero-section {
-            text-align: center;
-            padding: 30px 20px 40px;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
+        .hero-content {
+            background-color: rgba(255, 255, 255, 0.95); /* Plus opaque pour compenser */
+            }
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
@@ -168,16 +164,9 @@
 
         /* Styles du formulaire */
         .form-container {
-            background: rgba(255, 255, 255, 0.9); /* Plus opaque sans overlay */
-            border-radius: var(--radius);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-            padding: 30px 25px;
-            margin-bottom: 40px;
-            transition: var(--transition);
-            position: relative;
-            z-index: 5;
-            border: 1px solid rgba(255, 46, 99, 0.1);
-        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.98); /* Presque blanc pur */
+             }
         .form-container:hover {
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
         }
