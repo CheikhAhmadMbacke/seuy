@@ -62,12 +62,17 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(1);
+            filter: brightness(0.9);
         }
 
         .overlay {
-    display: none; /* Enlève complètement l'overlay */
-}
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, rgba(255, 230, 235, 0.7) 100%);
+        }
 
         /* Header avec logo textuel */
         .header-container {
@@ -89,37 +94,39 @@
         }
 
         /* Hero section avec le titre principal */
-        .hero-content {
-            background-color: rgba(255, 255, 255, 0.95); /* Plus opaque pour compenser */
-            }
+        .hero-section {
+            text-align: center;
+            padding: 30px 20px 40px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.7); /* Réduisez cette valeur pour plus de transparence */
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: var(--radius);
             padding: 30px;
             box-shadow: 0 10px 30px var(--shadow);
             backdrop-filter: blur(5px);
-            }
+        }
 
-        /* Ajustez aussi les couleurs de texte pour mieux contraster avec l'image */
         h1 {
             font-size: 1.8rem;
             margin-bottom: 10px;
             color: var(--primary-dark);
             line-height: 1.3;
-            text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9); /* Ajoutez une ombre blanche pour la lisibilité */
         }
 
         .tagline {
             font-size: 1.3rem;
-            color: var(--primary-dark); /* Changez en rose foncé pour plus de contraste */
+            color: var(--primary);
             margin-bottom: 15px;
             font-weight: 600;
-            text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
         }
-         .promise {
-            background: rgba(255, 255, 255, 0.85); /* Plus opaque sans overlay */
+
+        .promise {
+            background: linear-gradient(135deg, var(--light) 0%, var(--lighter) 100%);
             border-radius: var(--radius-small);
             padding: 15px;
             margin-top: 15px;
@@ -127,8 +134,8 @@
             border-left: 4px solid var(--primary);
             color: var(--text);
             font-weight: 500;
-            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
         }
+
         .promise i {
             margin-right: 8px;
             color: var(--primary);
@@ -164,9 +171,17 @@
 
         /* Styles du formulaire */
         .form-container {
-        .form-container {
-            background: rgba(255, 255, 255, 0.98); /* Presque blanc pur */
-             }
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            padding: 30px 25px;
+            margin-bottom: 40px;
+            transition: var(--transition);
+            position: relative;
+            z-index: 5;
+            border: 1px solid rgba(255, 46, 99, 0.1);
+        }
+
         .form-container:hover {
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
         }
@@ -746,4 +761,4 @@ _Je confirme mon inscription et je m'engage à respecter les valeurs de l'agence
         });
     </script>
 </body>
-</html>
+    </html>
